@@ -3,7 +3,9 @@
  * @author ____
  */
 public class TwoThreeTree<E extends Comparable<E>> {
+
     // the root of the tree
+
     private TwoThreeNode<E> root;
     /**
      * The constructor of the 2-3 Tree
@@ -19,7 +21,9 @@ public class TwoThreeTree<E extends Comparable<E>> {
         String s = inorder(root);
         return s;
     }
+
     // The helper method for in-order traversal of the 2-3 Tree
+
     private String inorder(TwoThreeNode<E> r) {
         String s = "";
         if (r == null)
