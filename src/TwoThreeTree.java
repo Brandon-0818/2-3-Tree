@@ -9,7 +9,6 @@ public class TwoThreeTree<E extends Comparable<E>> {
     // the root of the tree
 
     private TwoThreeNode<E> root;
-
     /**
      * The constructor of the 2-3 Tree
      */
@@ -26,6 +25,7 @@ public class TwoThreeTree<E extends Comparable<E>> {
         return inorder(root);
     }
     /**
+     * @Author Brandon Leiva
      * A helper method for inserting an element into the 2-3 Tree.
      * This method handles the recursive insertion logic and manages node splits.
      *
@@ -47,6 +47,9 @@ public class TwoThreeTree<E extends Comparable<E>> {
         // and insert the key there
 
         else {
+
+            // create a variable to store the position of the child node to traverse
+
             int pos;
 
             // determine which child to traverse based on the keys in the current node
@@ -69,6 +72,8 @@ public class TwoThreeTree<E extends Comparable<E>> {
             }
 
             // recursively insert into the appropriate child
+            // create an array to store the promoted key during the split
+            // create an array to store the new child nodes created during the split
 
             E[] childPromoted = (E[]) new Comparable[1];
             TwoThreeNode<E>[] childNewChildren = new TwoThreeNode[2];
@@ -98,6 +103,10 @@ public class TwoThreeTree<E extends Comparable<E>> {
         }
     }
     /**
+     * @Author Brandon Leiva
+     * A helper method for inserting a key into a leaf node.
+     * This method handles the case where the leaf node already contains two keys.
+     * If the node is a 2-node, the key is inserted in sorted order without splitting.
      * Splits a leaf node in the 2-3 Tree when it already contains two keys.
      * If the node is a 2-node, the new key is inserted in sorted order without splitting.
      * If the node is a 3-node, the keys are sorted, and the middle key is promoted.
@@ -153,6 +162,10 @@ public class TwoThreeTree<E extends Comparable<E>> {
         }
     }
     /**
+     * @Author Brandon Leiva
+     * A helper method for inserting a key into a non-leaf node.
+     * This method handles the case where the non-leaf node already contains two keys.
+     * If the node is a 2-node, the key is inserted in sorted order without splitting.
      * Splits a non-leaf (internal) node in the 2-3 Tree when it already contains two keys.
      * If the node is a 2-node, the promoted key is inserted in sorted order without splitting.
      * If the node is a 3-node, the keys are sorted, and the middle key is promoted.
@@ -244,6 +257,13 @@ public class TwoThreeTree<E extends Comparable<E>> {
         }
     }
 
+    /**
+     * Performs an in-order traversal starting from the given node.
+     * It processes the keys in sorted order, constructing a string representation of the traversal.
+     *
+     * @param r The starting node of the traversal. It can either be a leaf or an internal node.
+     * @return A string representation of the in-order traversal of the subtree rooted at the given node.
+     */
     private String inorder(TwoThreeNode<E> r) {
         String s = "";
         if (r == null)
@@ -265,6 +285,7 @@ public class TwoThreeTree<E extends Comparable<E>> {
     }
 
     /**
+     * @Author Brandon Leiva
      * Searches for a specific element in the 2-3 Tree.
      * This method traverses the tree starting from the root and checks
      * if the given element exists in any of the nodes.
@@ -298,6 +319,11 @@ public class TwoThreeTree<E extends Comparable<E>> {
     }
 
     /**
+     * @Author Brandon Leiva
+     * Deletes a specific element from the 2-3 Tree.
+     * This method traverses the tree starting from the root and checks
+     * if the given element exists in any of the nodes.
+     * If the element is found, it is removed from the tree.
      * Inserts a new element into the 2-3 Tree.
      * If the tree is empty, a new root node is created.
      * Otherwise, the element is inserted into the appropriate position,
@@ -317,6 +343,10 @@ public class TwoThreeTree<E extends Comparable<E>> {
         // otherwise, insert the data into the tree
         // and handle the case where the root is split
         // by creating a new root node
+
+        // create an array to store the promoted key during the split
+        // create an array to store the new child nodes created during the split
+        // recursively insert the data into the tree
 
         E[] promotedKey = (E[]) new Comparable[1];
         TwoThreeNode<E>[] newChildren = new TwoThreeNode[2];

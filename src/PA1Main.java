@@ -33,7 +33,7 @@ public class PA1Main {
 
             tree.insert(x);
         }
-        System.out.println("In-order Travesal");
+        System.out.println("In-order Traversal");
 
 // perform in-order traversl on the 2-3 tree and print its result
 
