@@ -1,6 +1,7 @@
 /**
  * Brandon Leiva
- * PA1
+ * PA1 2-3 Tree
+ *
  * The main program for creating and testing 2-3 Trees
  * @author Srini Badri
  */
