@@ -1,4 +1,6 @@
 /**
+ * Brandon Leiva
+ * PA1
  * The main program for creating and testing 2-3 Trees
  * @author Srini Badri
  */
@@ -45,7 +47,7 @@ public class PA1Main {
 
         java.util.Scanner scan = new java.util.Scanner(System.in);
 
-// prompt user for data input to search for
+// prompt the user for data input to search for
 
         while (true) {
             System.out.print("Enter an integer value to search for: ");

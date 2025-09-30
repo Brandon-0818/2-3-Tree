@@ -52,20 +52,20 @@ public class TwoThreeTree<E extends Comparable<E>> {
 
             int pos;
 
-            // determine which child to traverse based on the keys in the current node
-            // if x is less than key1, go to left child
+            // we determine which child to traverse based on the keys in the current node
+            // if x is less than key1, go to the left child
 
             if (x.compareTo(node.key1) < 0) {
                 pos = 0;
             }
 
-            // if the node is a 2-node or x is less than key2, go to middle child
+            // if the node is a 2-node or x is less than key2, go to the middle child
 
             else if (node.key2 == null || x.compareTo(node.key2) < 0){
                 pos = 1;
             }
 
-            // otherwise, go to right child
+            // otherwise, go to the right child
 
             else {
                 pos = 2;
