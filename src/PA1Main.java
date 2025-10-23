@@ -2,6 +2,9 @@
  * Brandon Leiva
  * PA1 2-3 Tree
  *
+ * Resources: StackOverflow for help with handling leaf and nonleaf cases
+ *            Gemini/ChatGPT for debugging assistance
+ *
  * The main program for creating and testing 2-3 Trees
  * @author Srini Badri
  */
